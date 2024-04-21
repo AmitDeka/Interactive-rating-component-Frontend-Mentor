@@ -1,0 +1,228 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400,700&display=swap");
+@import "./breakpoints";
+
+$Orange: hsl(25, 97%, 53%);
+$White: hsl(0, 0%, 100%);
+$Light_Grey: hsl(217, 12%, 63%);
+$Medium_Grey: hsl(216, 12%, 54%);
+$Dark_Blue: hsl(213, 19%, 18%);
+$Very_Dark_Blue: hsl(216, 12%, 8%);
+$font-family: "Overpass", sans-serif;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: $Very_Dark_Blue;
+  color: $White;
+  font-family: $font-family;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  @include breakpoint(sm) {
+    line-height: 1.6;
+  }
+}
+
+main {
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  width: 100%;
+}
+
+.container {
+  width: 325px;
+  @include breakpoint(sm) {
+    width: 410px;
+  }
+}
+
+.d-none {
+  display: none;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+.card {
+  background: linear-gradient(225deg, #242a32, #1a1d24);
+  border-radius: 15px;
+  padding: 25px;
+  &-header {
+    &_circle {
+      align-items: center;
+      background-color: $Dark_Blue;
+      border-radius: 50%;
+      display: flex;
+      height: 40px;
+      justify-content: center;
+      width: 40px;
+      img {
+        height: 14px;
+        @include breakpoint(sm) {
+          height: 16px;
+        }
+      }
+      @include breakpoint(sm) {
+        height: 50px;
+        width: 50px;
+      }
+    }
+  }
+  &-body {
+    h1 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      margin-top: 16px;
+      @include breakpoint(sm) {
+        font-size: 1.625rem;
+        margin-bottom: 10px;
+        margin-top: 25px;
+      }
+    }
+    p {
+      color: $Light_Grey;
+      font-size: 0.875rem;
+      @include breakpoint(sm) {
+        font-size: 0.9375rem;
+      }
+    }
+    &_input {
+      ul {
+        display: flex;
+        justify-content: space-around;
+        list-style: none;
+        margin: 30px 0 25px;
+        li {
+          button {
+            align-items: center;
+            background-color: $Dark_Blue;
+            border: none;
+            border-radius: 50%;
+            color: $Light_Grey;
+            cursor: pointer;
+            display: flex;
+            font-family: $font-family;
+            font-weight: 700;
+            height: 40px;
+            justify-content: center;
+            outline: none;
+            transition: all 0.3s ease-in-out;
+            width: 40px;
+            &:focus {
+              background-color: $Light_Grey;
+              color: $White;
+            }
+            &:hover {
+              background-color: $Orange;
+              color: $White;
+            }
+            @include breakpoint(sm) {
+              height: 50px;
+              width: 50px;
+            }
+          }
+        }
+        @include breakpoint(sm) {
+          margin: 35px 0;
+        }
+      }
+    }
+    &_btn {
+      width: 100%;
+      button {
+        background-color: $Orange;
+        border: 0;
+        border-radius: 99999px;
+        color: $White;
+        cursor: pointer;
+        font-family: $font-family;
+        font-weight: 700;
+        letter-spacing: 1px;
+        outline: none;
+        padding: 14px 0;
+        text-transform: uppercase;
+        transition: all 0.3s ease-in-out;
+        width: 100%;
+        &:hover,
+        &:focus {
+          background-color: $White;
+          color: $Orange;
+        }
+        @include breakpoint(sm) {
+          padding: 12px 0;
+        }
+      }
+    }
+  }
+  @include breakpoint(sm) {
+    border-radius: 30px;
+    padding: 30px;
+  }
+}
+.thankyou-card {
+  padding: 35px 25px;
+  .card-header {
+    display: flex;
+    justify-content: center;
+    img {
+      height: 95px;
+      @include breakpoint(sm) {
+        height: 110px;
+      }
+    }
+  }
+  .card-body {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    &_hightlight {
+      background-color: $Dark_Blue;
+      border-radius: 9999px;
+      margin-top: 25px;
+      padding: 4px 20px;
+      @include breakpoint(sm) {
+        margin-top: 30px;
+        padding: 4px 20px;
+      }
+      p {
+        color: $Orange;
+      }
+    }
+    h1 {
+      margin-bottom: 10px;
+      margin-top: 25px;
+
+      @include breakpoint(sm) {
+        margin-top: 30px;
+      }
+    }
+  }
+  @include breakpoint(sm) {
+    padding: 45px 35px;
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  & a {
+    color: $Orange;
+  }
+}
