@@ -36,7 +36,6 @@ Users should be able to:
 - # Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 - Solution URL: [Click Here](https://github.com/AmitDeka/Interactive-rating-component-Frontend-Mentor)
 - Live Site URL: [Click Here](https://amitdeka.github.io/Interactive-rating-component-Frontend-Mentor/)
-  > > > > > > > 38506a5dd23c7ee6eb26031037d3f7f05b0b9b1e
 
 ## My process
 
